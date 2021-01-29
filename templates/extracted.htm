@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+
+</head>
+
+<body>
+
+
+<!-- <h1>{{  value  }}</h1> -->
+
+    <section class="backgroundImge">
+        <div>
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item  mx-3">
+                                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item  mx-3">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+
+            </div>
+            <div class="col m-5">
+
+                <textarea id="extracted-text" rows="20" cols="80"> {{  value  }} </textarea>
+
+                <div class="text-center">
+                    <button type="submit" class=" btn Button-style ">Download as PDF</button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
