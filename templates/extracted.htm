@@ -12,20 +12,19 @@
 
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
-
+    <!-- <link rel="stylesheet" href="../static/css/Style.css"> -->
 </head>
 
 <body>
 
 
-<!-- <h1>{{  value  }}</h1> -->
+    <!-- <h1>{{  value  }}</h1> -->
 
     <section class="backgroundImge">
         <div>
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container-fluid">
-
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -36,7 +35,7 @@
                                 <a class="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
                             <li class="nav-item  mx-3">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="/about_us">About</a>
                             </li>
                         </ul>
                     </div>
@@ -45,23 +44,41 @@
             <!-- Navbar End -->
         </div>
 
-        <div class="row">
+        <div class="text-center">
+            <form action="/pdf" method="post">
+            <!-- <label class="col-form-label"> <b> Filename</b> </label> -->
+            <!-- <input type="text" id="filename" value="Untitled-1"> -->
+            <div class="my-3 d-flex justify-content-center align-items-center">
+                <textarea id="extracted-text" name="corrected" rows="20" cols="80"> {{  value  }} </textarea>
+            </div>
 
-            <div class="col">
+
+
+            <div class="text-center">
+
+                <button type="submit" class=" btn Button-style ">Download as PDF</button>
+          
+                <!-- <button id="download-btn" class=" btn Button-style ">Save as Textfile</button> -->
 
             </div>
-            <div class="col m-5">
+        </form>
+<br>
+        <div class="text-center">
 
-                <textarea id="extracted-text" rows="20" cols="80"> {{  value  }} </textarea>
+            <!-- <button type="submit" class=" btn Button-style ">Download as PDF</button> -->
+      
+            <button id="download-btn" class=" btn Button-style ">Save as Textfile</button>
 
-                <div class="text-center">
-                    <button type="submit" class=" btn Button-style ">Download as PDF</button>
-                </div>
+        </div>
+        
 
-            </div>
         </div>
 
     </section>
+
+
+    <!-- <script src="../static/js/index.js"></script> -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 
 </body>
 
