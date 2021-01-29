@@ -1,2 +1,2 @@
 # Team_Stunners-Text_Recognition_System .
-Project to recognize handwritten text from image as a part of SPECATHON2021.
+Our project is to recognize handwritten text from image as a part of SPECATHON2021.
